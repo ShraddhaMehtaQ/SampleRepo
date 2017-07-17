@@ -1,0 +1,7 @@
+a = int(raw_input("\nEnter first number: "))
+b = int(raw_input("\nEnter second number: "))
+str1 = raw_input("\nEnter first string: ")
+str2 = raw_input("\nEnter second string: ")
+print ("\n This is  +operator overloading")
+print ("\nThe addition of two numbers is {}".format(a+b))
+print ("\nThe joined string is {}".format(str1+str2))
