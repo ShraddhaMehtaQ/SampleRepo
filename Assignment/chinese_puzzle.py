@@ -1,8 +1,11 @@
-import numpy as np
-print("\nSolving a classic ancient chinese puzzle")
-heads = int(raw_input("Enter the number of heads: "))
-legs = int(raw_input("Enter the number of legs: "))
-a = np.array([[1,1], [2,4]])
-b = np.array([heads, legs])
-x = np.linalg.solve(a, b)
-print("\nThe number of chickens is {} and the number of rabbits is {}".format(x[0], x[1]))
+def solve(numheads,numlegs):
+	for i in range(numheads+1):
+		j=numheads-i
+        	if 2*i+4*j==numlegs:
+            		return i,j
+numheads=35
+numlegs=94
+print("\nThe solution of chinese puzzle is: ")
+solutions=solve(numheads,numlegs)
+
+print ("There are {} number of chickens and {} number of rabbits".format(solutions[0],solutions[1]))
